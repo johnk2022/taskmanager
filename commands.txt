@@ -1,1 +1,15 @@
 pip3 install Flask-SQLAlchemy psycopg2
+
+set_pg
+psql
+CREATE DATABASE taskmanager;
+\c taskmanager;
+\q
+
+python3
+from taskmanager import db
+db.create_all()
+exit()
+
+psql -d taskmanager
+\dt 
