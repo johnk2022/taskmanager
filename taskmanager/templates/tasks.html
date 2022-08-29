@@ -3,4 +3,11 @@
 
 <h3 class="light-blue-text text-darken-4 center-align">Tasks</h3>
 
-{% endblock %}
+{% endblock %}from flask import render_template
+from taskmanager import app, db
+from taskmanager.models import Category, Task
+
+
+@app.route("/")
+def home():
+    return render_template("tasks.html")
