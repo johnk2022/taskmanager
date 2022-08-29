@@ -13,3 +13,4 @@ exit()
 
 psql -d taskmanager
 \dt 
+
